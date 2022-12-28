@@ -51,7 +51,10 @@ const Button = ({
     flex:2
   }; 
 
-  var Buttonn = []
+  var Buttonn = [
+
+    
+  ]
   // var num = num
   for (let index = 0; index < num; index++) {
     Buttonn.push(index)
