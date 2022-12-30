@@ -4,7 +4,8 @@ import { Text, View, TouchableOpacity, Dimensions, ScrollView } from 'react-nati
 const width = Dimensions.get('window').width;
 
 const Button = ({
-  text,
+  btntext1,
+  btntext2,
   onPress,
   type = 'filled',
   color = '#3f51b5',
@@ -25,7 +26,7 @@ const Button = ({
   const containerCommonStyle = {
     backgroundColor: btnBgColor,
     paddingVertical: 10,
-    // width: btnSize,
+    //width: btnSize,
     borderRadius: btnBorderRadius,
     backgroundColor: 'red',
 
@@ -81,7 +82,7 @@ const Button = ({
               <View style={[ContainerDir]}  >
                 <TouchableOpacity onPress={btn1OnPress} activeOpacity={0.7}>
                   <View style={[containerCommonStyle, border]}>
-                    <Text style={[textCommonStyle]}> {text} </Text>
+                    <Text style={[textCommonStyle]}> {btntext1} </Text>
                   </View>
                 </TouchableOpacity>
               </View>
@@ -90,7 +91,7 @@ const Button = ({
           {canShow && <View style={[ContainerDir]} >
                 <TouchableOpacity onPress={btn2OnPress} activeOpacity={0.7}>
                   <View style={[containerCommonStyle, border]}>
-                    <Text style={[textCommonStyle]}> {text} </Text>
+                    <Text style={[textCommonStyle]}> {btntext2} </Text>
                   </View>
                 </TouchableOpacity>
               </View>}
@@ -104,7 +105,8 @@ const Button = ({
 export default Button;
 
 Button.defaultProps={
-  text:'submit',
+  btntext1:'hhh',
+  btntext2:'vvv',
   canShow:false,
   btn1OnPress:()=>{},
   btn2OnPress:()=>{}
